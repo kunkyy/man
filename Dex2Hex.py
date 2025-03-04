@@ -1,28 +1,34 @@
 import sys
 
 def decimal_to_hex(decimal_value):
+    if not isinstance(decimal_value, int):
+        raise TypeError("Input must be an integer.")
+    if decimal_value < 0:
+        raise ValueError("Negative numbers are not allowed.")
+
     hex_chars = "0123456789ABCDEF"
     hexadecimal = ""
-    num = decimal_value
 
-    print(f"Converting the Decimal Value {num} to Hex...")
+    print(f"Converting the Decimal Value {decimal_value} to Hex...")
 
-    while num != 0:
-        rem = num % 16
-        hexadecimal = hex_chars[rem] + hexadecimal
-        num //= 16
+    if decimal_value == 0:
+        hexadecimal = "0"
+    else:
+        num = decimal_value
+        while num != 0:
+            rem = num % 16
+            hexadecimal = hex_chars[rem] + hexadecimal
+            num //= 16
 
     print(f"Hexadecimal representation is: {hexadecimal}")
-    return hexadecimal  # Return the hexadecimal value for testing
+    return hexadecimal
 
 if __name__ == "__main__":
-    if len(sys.argv) < 2:
-        print("Error: No input provided. Please provide a decimal number as an argument.")
-        sys.exit(1)  # Exit with an error code
-
-    try:
-        decimal_value = int(sys.argv[1])  # Ensure input is an integer
-        decimal_to_hex(decimal_value)
-    except ValueError:
-        print("Error: Invalid input. Please provide a valid integer.")
-        sys.exit(1)  # Exit with an error code
+    if len(sys.argv) > 1:
+        try:
+            decimal_value = int(sys.argv[1])
+            decimal_to_hex(decimal_value)
+        except ValueError:
+            print("Please provide a valid integer.")
+    else:
+        print("Usage: python Dec2Hex.py <decimal_number>")
