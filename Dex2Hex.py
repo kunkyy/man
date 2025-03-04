@@ -21,13 +21,13 @@ def decimal_to_hex(decimal_value):
             num //= 16
 
     print(f"Hexadecimal representation is: {hexadecimal}")
-    return hexadecimal
+    return hexadecimal  # Ensure function returns hex for testing
 
 if __name__ == "__main__":
     if len(sys.argv) > 1:
         try:
             decimal_value = int(sys.argv[1])
-            decimal_to_hex(decimal_value)
+            print(decimal_to_hex(decimal_value))  # Print result for command-line test
         except ValueError:
             print("Please provide a valid integer.")
     else:
