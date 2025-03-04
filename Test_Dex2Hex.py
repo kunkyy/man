@@ -1,7 +1,7 @@
 import unittest
 import sys
 import subprocess
-from Dec2Hex import decimal_to_hex
+from Dex2Hex import decimal_to_hex
 
 class TestDecimalToHex(unittest.TestCase):
     def test_single_digit(self):
