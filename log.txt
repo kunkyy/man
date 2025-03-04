@@ -1,0 +1,19 @@
+commit c8a5d4aee5c776ccf7e09d53736e61a682154e78
+Author: kunkyy <aadeye302@caledonian.ac.uk>
+Date:   Fri Feb 28 01:56:05 2025 +0000
+
+    Added input validation and error handling
+
+commit 98789d961ed8c200d644785b837c4ced730a21b3
+Author: kunkyy <aadeye302@caledonian.ac.uk>
+Date:   Fri Feb 28 01:02:28 2025 +0100
+
+    Update1 Dex2Hex.py
+    
+    Correct Indentation
+
+commit fb0bb5f27916b007699fe8ab97a2bf447458563f
+Author: kunkyy <aadeye302@caledonian.ac.uk>
+Date:   Thu Feb 27 23:33:40 2025 +0000
+
+    initial commit
